@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0 10% 0 10%;
+}
+
+.container {
+  margin-top: 10%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.podcastContainer {
+  width: 200px;
+  min-height: 300px;
+  text-align: left;
+  margin: 0 32px 32px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .podcastContainer {
+    width: 80vw;
+    min-height: 100px;
+  }
+}
