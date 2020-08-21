@@ -7,16 +7,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function Container() {
   const podcast = fetchFunction();
-  console.log(podcast);
+
   return (
     <div className="container">
       <Router>
         <Switch>
-          <Route path={`/${podcast.episode}`} component="" />
+          <Route path={`/${podcast[0].episode}`} exact component="" />
         </Switch>
-        <PodcastWidget />
-        <PodcastWidget />
-        <PodcastWidget />
+        <PodcastWidget podcast={podcast[0]} />
+        <PodcastWidget podcast={podcast[1]} />
+        <PodcastWidget podcast={podcast[2]} />
       </Router>
     </div>
   );
