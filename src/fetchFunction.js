@@ -1,3 +1,5 @@
+//fetch function that load soundcloud API to pass trought props
+
 export default function fetchFunction() {
   const podcast = [
     {

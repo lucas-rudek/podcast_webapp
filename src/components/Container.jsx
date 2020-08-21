@@ -1,18 +1,17 @@
 import React from "react";
 import "../styles.css";
-import PodcastWidget from "./PodcastWidget.jsx";
-import fetchFunction from "../fetchFunction";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-//fetch function that load soundcloud API to pass trought props
+import PodcastWidget from "./PodcastWidget.jsx";
+import Podcast from "./Podcast.jsx";
+import fetchFunction from "../fetchFunction";
 
 export default function Container() {
   const podcast = fetchFunction();
-
   return (
     <div className="container">
       <Router>
         <Switch>
-          <Route path={`/${podcast[0].episode}`} exact component="" />
+          <Route path={`/${podcast[0].episode}`} exact component={Podcast} />
         </Switch>
         <PodcastWidget podcast={podcast[0]} />
         <PodcastWidget podcast={podcast[1]} />
