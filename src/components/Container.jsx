@@ -7,22 +7,23 @@ import fetchFunction from "../fetchFunction";
 
 export default function Container() {
   const podcast = fetchFunction();
+  console.log(podcast);
   return (
     <div className="container">
       <Router>
+        {podcast.map((res) => {
+          return <PodcastWidget podcast={res} />;
+        })}
         <Switch>
-          <Route
-            path="/"
-            exact
-            render={(props) => (
-              <PodcastWidget {...props} podcast={podcast[0]} />
-            )}
-          />
-          <Route
-            path={`/${podcast[0].episode}`}
-            exact
-            render={(props) => <Podcast {...props} podcast={podcast[0]} />}
-          />
+          {podcast.map((res) => {
+            return (
+              <Route
+                exact
+                path={`/${res.episode}`}
+                render={(props) => <Podcast {...props} podcast={res} />}
+              />
+            );
+          })}
         </Switch>
       </Router>
     </div>

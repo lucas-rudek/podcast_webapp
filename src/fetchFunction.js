@@ -4,7 +4,7 @@ export default function fetchFunction() {
   const podcast = [
     {
       episode: "01",
-      name: "Test",
+      name: "Test 01",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
