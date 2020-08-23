@@ -11,11 +11,19 @@ export default function Container() {
     <div className="container">
       <Router>
         <Switch>
-          <Route path={`/${podcast[0].episode}`} exact component={Podcast} />
+          <Route
+            path="/"
+            exact
+            render={(props) => (
+              <PodcastWidget {...props} podcast={podcast[0]} />
+            )}
+          />
+          <Route
+            path={`/${podcast[0].episode}`}
+            exact
+            render={(props) => <Podcast {...props} podcast={podcast[0]} />}
+          />
         </Switch>
-        <PodcastWidget podcast={podcast[0]} />
-        <PodcastWidget podcast={podcast[1]} />
-        <PodcastWidget podcast={podcast[2]} />
       </Router>
     </div>
   );
