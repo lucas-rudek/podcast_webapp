@@ -11,10 +11,12 @@ export default function Container() {
   return (
     <div className="container">
       <Router>
-        {podcast.map((res) => {
-          return <PodcastWidget podcast={res} />;
-        })}
         <Switch>
+          <Route exact path="/">
+            {podcast.map((res) => {
+              return <PodcastWidget podcast={res} />;
+            })}
+          </Route>
           {podcast.map((res) => {
             return (
               <Route
