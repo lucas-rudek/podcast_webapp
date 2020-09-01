@@ -9,7 +9,7 @@ export default function Podcast(props) {
       <p>{props.podcast.description}</p>
       <iframe
         title="teste"
-        src={`${props.podcast.spotify_uri}`}
+        src={`${props.podcast.spotify_url}`}
         width="250"
         height="240"
         frameBorder="0"
