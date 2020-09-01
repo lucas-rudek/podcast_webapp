@@ -11,18 +11,26 @@
   justify-content: center;
 }
 
-.podcastContainer {
+.podcastWidget {
   width: 200px;
   min-height: 300px;
   text-align: left;
   margin: 0 32px 32px 0;
 }
 
+.podcastEpisode p {
+  text-align: left;
+}
+
+.podcastEpisode button {
+  margin: 20px;
+}
+
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
   }
-  .podcastContainer {
+  .podcastWidget {
     width: 80vw;
     min-height: 100px;
   }

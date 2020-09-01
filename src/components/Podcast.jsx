@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Podcast(props) {
   return (
-    <div className="podcastContainer">
+    <div className="podcastEpisode">
       <h1>{props.podcast.name}</h1>
       <p>{props.podcast.description}</p>
       <iframe
@@ -18,7 +18,9 @@ export default function Podcast(props) {
       ></iframe>
       <br />
       <Link to="/">
-        <button type="button">Back</button>
+        <button className="button" type="button">
+          Back
+        </button>
       </Link>
     </div>
   );
