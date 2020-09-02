@@ -9,9 +9,7 @@ export default function Podcast(props) {
       <p>{props.podcast.description}</p>
       <iframe
         title="teste"
-        src={`${props.podcast.spotify_url}`}
-        width="250"
-        height="240"
+        src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/293"
         frameBorder="0"
         allowtransparency="true"
         allow="encrypted-media"

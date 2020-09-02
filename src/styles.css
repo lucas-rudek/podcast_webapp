@@ -5,7 +5,7 @@
 }
 
 .container {
-  margin-top: 10%;
+  margin-top: 5%;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -26,6 +26,11 @@
   margin: 20px;
 }
 
+.podcastEpisode iframe {
+  width: 600px;
+  height: 200px;
+}
+
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
@@ -33,5 +38,9 @@
   .podcastWidget {
     width: 80vw;
     min-height: 100px;
+  }
+  .podcastEpisode iframe {
+    width: 250px;
+    height: 150px;
   }
 }
