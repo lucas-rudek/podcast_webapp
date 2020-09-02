@@ -1,7 +1,14 @@
-//fetch function that load spotify API to pass trought props
+import axios from "axios";
 
-export default function fetchFunction() {
-  const podcast = [
+export default async function fetchFunction() {
+  const api_link =
+    "https://api-v2.soundcloud.com/playlists/334671843?client_id=yBT1d8kK7at5QuM6ik9RFcvPvDTi4xyP";
+
+  const res = await axios(api_link);
+
+  console.log(res);
+
+  /*
     {
       episode: "01",
       name: "Test 01",
@@ -22,5 +29,5 @@ export default function fetchFunction() {
     }
   ];
 
-  return podcast;
+  return podcast; */
 }
