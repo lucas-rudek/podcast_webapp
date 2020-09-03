@@ -1,26 +1,13 @@
-import express from "express";
-import cors from "cors";
 import axios from "axios";
-var app = express();
-
-app.use(cors());
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 export default function fetchFunction() {
   const api_link =
-    "https://api-v2.soundcloud.com/playlists/334671843?client_id=yBT1d8kK7at5QuM6ik9RFcvPvDTi4xyP";
+    "https://api.soundcloud.com/playlists/334671843?client_id=1dff55bf515582dc759594dac5ba46e9";
 
   axios
     .get(api_link)
     .then((res) => {
-      console.log(res);
+      console.log(res.data.uri);
     })
     .catch((err) => {
       console.log(err);
