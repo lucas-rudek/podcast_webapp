@@ -7,7 +7,6 @@ import fetchFunction from "../fetchFunction";
 
 export default function Container() {
   const podcast = fetchFunction();
-  console.log(podcast);
   return (
     <div className="container">
       <Router>

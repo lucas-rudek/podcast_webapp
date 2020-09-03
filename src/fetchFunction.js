@@ -1,14 +1,17 @@
 import axios from "axios";
 
-export default async function fetchFunction() {
+export default function fetchFunction() {
   const api_link =
     "https://api-v2.soundcloud.com/playlists/334671843?client_id=yBT1d8kK7at5QuM6ik9RFcvPvDTi4xyP";
 
-  const res = await axios(api_link);
+  async function teste() {
+    const res = await axios(api_link);
+    console.log(res);
+  }
 
-  console.log(res);
+  teste();
 
-  /*
+  const podcast = [
     {
       episode: "01",
       name: "Test 01",
@@ -29,5 +32,5 @@ export default async function fetchFunction() {
     }
   ];
 
-  return podcast; */
+  return podcast;
 }
