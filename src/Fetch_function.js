@@ -9,7 +9,8 @@ export default function Fetch_function() {
 
   useEffect(() => {
     axios.get(api_link).then((res) => {
-      let podcast = res.data.map((res) => ({
+      let podcast = res.data.map((res, index) => ({
+        episode: index + 1,
         name: res.title,
         description: res.description,
         image: res.artwork_url,
