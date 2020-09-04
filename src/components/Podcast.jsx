@@ -8,8 +8,8 @@ export default function Podcast(props) {
       <h1>{props.podcast.name}</h1>
       <p>{props.podcast.description}</p>
       <iframe
-        title="teste"
-        src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/13158665"
+        title="ausculta_cast"
+        src={`https://w.soundcloud.com/player/?url=${props.podcast.uri}`}
         frameBorder="0"
         allowtransparency="true"
         allow="encrypted-media"

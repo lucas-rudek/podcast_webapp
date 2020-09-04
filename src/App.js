@@ -5,7 +5,7 @@ import Container from "./components/Container.jsx";
 export default function App(props) {
   return (
     <div className="App">
-      <h1>Future Talk</h1>
+      <h1>Ausculta Cast</h1>
       <Container />
     </div>
   );

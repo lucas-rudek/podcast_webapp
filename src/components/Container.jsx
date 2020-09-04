@@ -3,10 +3,10 @@ import "../styles.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PodcastWidget from "./PodcastWidget.jsx";
 import Podcast from "./Podcast.jsx";
-import fetchFunction from "../fetchFunction";
+import Fetch_function from "../Fetch_function.js";
 
 export default function Container() {
-  const podcast = fetchFunction();
+  const podcast = Fetch_function();
   return (
     <div className="container">
       <Router>

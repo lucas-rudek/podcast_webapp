@@ -5,11 +5,11 @@ import "../styles.css";
 export default function PodcastWidget(props) {
   return (
     <div key={props.id} className="podcastWidget">
-      <h2>Episode: {props.podcast.episode}</h2>
-      <h1>{props.podcast.name}</h1>
+      <h2>{props.podcast.name}</h2>
+      <img src={`${props.podcast.image}`} alt="episode" />
       <p>{props.podcast.description}</p>
       <Link to={`${props.podcast.episode}`}>
-        <button type="button">Listen More</button>
+        <button type="button">Saiba Mais</button>
       </Link>
     </div>
   );
