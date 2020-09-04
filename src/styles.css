@@ -18,6 +18,10 @@
   margin: 0 32px 32px 0;
 }
 
+.podcastWidget img {
+  width: 150px;
+}
+
 .podcastEpisode p {
   text-align: left;
 }
