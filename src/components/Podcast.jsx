@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles.css";
+import { PodcastWrapper } from "./styles.js";
 import { Link } from "react-router-dom";
 
 export default function Podcast(props) {
   return (
-    <div className="podcastEpisode">
+    <PodcastWrapper>
       <h1>{props.podcast.name}</h1>
       <p>{props.podcast.description}</p>
       <iframe
@@ -20,6 +20,6 @@ export default function Podcast(props) {
           Back
         </button>
       </Link>
-    </div>
+    </PodcastWrapper>
   );
 }

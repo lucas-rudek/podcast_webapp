@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ContainerWrapper } from "./styles.js";
 import PodcastWidget from "./PodcastWidget.jsx";
 import Podcast from "./Podcast.jsx";
 import Fetch_function from "../Fetch_function.js";
@@ -8,7 +8,7 @@ import Fetch_function from "../Fetch_function.js";
 export default function Container() {
   const podcast = Fetch_function();
   return (
-    <div className="container">
+    <ContainerWrapper>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -27,6 +27,6 @@ export default function Container() {
           })}
         </Switch>
       </Router>
-    </div>
+    </ContainerWrapper>
   );
 }
