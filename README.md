@@ -1,2 +1,4 @@
 # podcast_webapp
-Created with CodeSandbox
+Hi,
+
+The API key for Soundcloud is working no more. Feel free to check the code.
